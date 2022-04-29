@@ -133,6 +133,7 @@ The following fields are already included:
 
 ## Todos
 
+* Add `encrypted`
 * Custom `ResourceUpdateController` & `Update` component to be able to use slugs in url
 * [Nova File Field](https://nova.laravel.com/docs/4.0/resources/fields.html#file-field)
 * [ebess/advanced-nova-media-library](https://github.com/ebess/advanced-nova-media-library)
