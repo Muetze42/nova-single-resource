@@ -1,0 +1,7 @@
+### Basic template
+/.idea
+/.vscode
+/.vs
+/node_modules
+/vendor
+

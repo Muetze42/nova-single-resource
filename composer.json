@@ -1,0 +1,27 @@
+{
+    "name": "norman-huth/nova-single-resource",
+    "description": "Laravel Nova resource and fields for single record resources",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "NormanHuth\\SingleResource\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "Norman Huth",
+            "email": "norman@huth.it",
+            "homepage": "https://huth.it"
+        }
+    ],
+    "extra": {
+        "laravel": {
+            "providers": [
+                "NormanHuth\\SingleResource\\FieldServiceProvider"
+            ]
+        }
+    },
+    "require": {
+        "php": "^8.0"
+    }
+}

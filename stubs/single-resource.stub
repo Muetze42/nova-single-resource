@@ -1,0 +1,81 @@
+<?php
+
+namespace {{ namespace }};
+
+use Illuminate\Http\Request;
+use Laravel\Nova\Fields\ID;
+use Laravel\Nova\Http\Requests\NovaRequest;
+use NormanHuth\SingleResource\Traits\ResourceTrait;
+
+use NormanHuth\SingleResource\Fields\Boolean;
+use NormanHuth\SingleResource\Fields\BooleanGroup;
+use NormanHuth\SingleResource\Fields\Color;
+use NormanHuth\SingleResource\Fields\Country;
+use NormanHuth\SingleResource\Fields\Currency;
+use NormanHuth\SingleResource\Fields\Date;
+use NormanHuth\SingleResource\Fields\DateTime;
+use NormanHuth\SingleResource\Fields\KeyValue;
+use NormanHuth\SingleResource\Fields\Markdown;
+use NormanHuth\SingleResource\Fields\MultiSelect;
+use NormanHuth\SingleResource\Fields\Number;
+use NormanHuth\SingleResource\Fields\Select;
+use NormanHuth\SingleResource\Fields\Text;
+use NormanHuth\SingleResource\Fields\Textarea;
+use NormanHuth\SingleResource\Fields\Timezone;
+use NormanHuth\SingleResource\Fields\Trix;
+
+class {{ class }} extends Resource
+{
+    use ResourceTrait;
+
+    protected static function sections(): array
+    {
+        return [
+            'general-settings' => [
+                'name'   => __('General Settings'),
+                'icon'   => 'eye',
+                'faIcon' => '',
+            ],
+            'system' => [
+                'name'   => __('System'),
+                'icon'   => '',
+                'faIcon' => 'fa-brands fa-laravel fa-fw',
+            ],
+        ];
+    }
+
+    public function getGeneralSettingsFields(NovaRequest $request): array
+    {
+        return [
+            Currency::make('Price')->currency('EUR'),
+            Text::make(__('Text'), 'text'),
+            Boolean::make(__('Boolean'), 'boolean'),
+        ];
+    }
+
+    public function getSystemFields(NovaRequest $request): array
+    {
+        return [
+            Date::make(__('Date'), 'Date'),
+            DateTime::make(__('DateTime'), 'DateTime'),
+        ];
+    }
+
+    /**
+     * The model the resource corresponds to.
+     *
+     * @var string
+     */
+    public static $model = \{{ namespacedModel }}::class;
+
+    /**
+     * Get the cards available for the request.
+     *
+     * @param  \Laravel\Nova\Http\Requests\NovaRequest  $request
+     * @return array
+     */
+    public function cards(NovaRequest $request)
+    {
+        return [];
+    }
+}
