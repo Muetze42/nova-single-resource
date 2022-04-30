@@ -124,7 +124,7 @@ The following fields are already included:
 | [Timezone](https://nova.laravel.com/docs/4.0/resources/fields.html#timezone-field)         | NormanHuth\SingleResource\Fields\Timezone     |
 | [Trix](https://nova.laravel.com/docs/4.0/resources/fields.html#trix-field)                 | NormanHuth\SingleResource\Fields\Trix         |
 
-### File Fields
+#### File Fields
 
 | Original                                                                          | Single Resource                         |
 |-----------------------------------------------------------------------------------|-----------------------------------------|
