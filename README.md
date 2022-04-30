@@ -134,12 +134,12 @@ The following fields are already included:
 
 #### Package Fields
 
-| Package                                                                                    | Single Resource                                         |
-|--------------------------------------------------------------------------------------------|---------------------------------------------------------|
-| [File Field](https://nova.laravel.com/docs/4.0/resources/file-fields.html#overview)        | NormanHuth\SingleResource\Fields\NormanHuth\File        |
-| [norman-huth/nova-iframe-popup](https://github.com/Muetze42/norman-huth/nova-iframe-popup) | NormanHuth\SingleResource\Fields\NormanHuth\IframePopup |
-| [norman-huth/nova-secret-field](https://github.com/Muetze42/norman-huth/nova-secret-field) | NormanHuth\SingleResource\Fields\NormanHuth\SecretField |
-| [norman-huth/nova-values-field](https://github.com/Muetze42/nova-values-field)             | NormanHuth\SingleResource\Fields\NormanHuthValues       |
+| Package                                                                                    | Single Resource                                                                                      |
+|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
+| [norman-huth/nova-bbcode-textarea](https://github.com/Muetze42/nova-bbcode-textarea)       | NormanHuth\SingleResource\Fields\NormanHuth\BBCode<br>NormanHuth\SingleResource\Fields\NormanHuth\BB |
+| [norman-huth/nova-iframe-popup](https://github.com/Muetze42/norman-huth/nova-iframe-popup) | NormanHuth\SingleResource\Fields\NormanHuth\IframePopup                                              |
+| [norman-huth/nova-secret-field](https://github.com/Muetze42/norman-huth/nova-secret-field) | NormanHuth\SingleResource\Fields\NormanHuth\SecretField                                              |
+| [norman-huth/nova-values-field](https://github.com/Muetze42/nova-values-field)             | NormanHuth\SingleResource\Fields\NormanHuthValues                                                    |
 
 ### Field Development Notices
 
