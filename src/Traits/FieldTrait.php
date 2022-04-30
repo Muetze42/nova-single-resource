@@ -208,14 +208,13 @@ trait FieldTrait
      * @param string $requestAttribute
      * @param object $model
      * @param string $attribute
-     * @return mixed|void
      */
-    protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute)
+    protected function fillAttribute(NovaRequest $request, $requestAttribute, $model, $attribute): void
     {
-        if (isset($this->fieldResolveAttribute)) {
-            return call_user_func($this->fieldResolveAttribute, $request, $model, $attribute, $requestAttribute);
+        if (method_exists($this, 'fieldFillAttribute')) {
+            $this->fieldFillAttribute($request, $requestAttribute, $model, $attribute);
+            return;
         }
-
         $this->fillAttributeFromRequest($request, $requestAttribute, $model, $attribute);
     }
 
