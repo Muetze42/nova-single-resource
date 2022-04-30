@@ -90,6 +90,13 @@ class Setting extends Model
     public static string $valueColumn = 'value';
 ```
 
+### Change cast of a field
+
+```php
+Text::make(__('SMTP Password'), 'smtp_password')
+    ->cast('encrypted'),
+```
+
 ### Single Resource Fields
 
 In this resource must be used adjusted fields.
@@ -117,14 +124,22 @@ The following fields are already included:
 | [Timezone](https://nova.laravel.com/docs/4.0/resources/fields.html#timezone-field)         | NormanHuth\SingleResource\Fields\Timezone     |
 | [Trix](https://nova.laravel.com/docs/4.0/resources/fields.html#trix-field)                 | NormanHuth\SingleResource\Fields\Trix         |
 
+### File Fields
+
+| Original                                                                          | Single Resource                         |
+|-----------------------------------------------------------------------------------|-----------------------------------------|
+| [File](https://nova.laravel.com/docs/4.0/resources/fields.html#boolean-field)     | NormanHuth\SingleResource\Fields\File   |
+| [Image](https://nova.laravel.com/docs/4.0/resources/file-fields.html#images)      | NormanHuth\SingleResource\Fields\Image  |
+| [Avatar](https://nova.laravel.com/docs/4.0/resources/file-fields.html#avatars)    | NormanHuth\SingleResource\Fields\Avatar |
+
 #### Package Fields
 
-| Package                                                                                    | Single Resource                                                                                      |
-|--------------------------------------------------------------------------------------------|------------------------------------------------------------------------------------------------------|
-| [norman-huth/nova-bbcode-textarea](https://github.com/Muetze42/nova-bbcode-textarea)       | NormanHuth\SingleResource\Fields\NormanHuth\BBCode<br>NormanHuth\SingleResource\Fields\NormanHuth\BB |
-| [norman-huth/nova-iframe-popup](https://github.com/Muetze42/norman-huth/nova-iframe-popup) | NormanHuth\SingleResource\Fields\NormanHuth\IframePopup                                              |
-| [norman-huth/nova-secret-field](https://github.com/Muetze42/norman-huth/nova-secret-field) | NormanHuth\SingleResource\Fields\NormanHuth\SecretField                                              |
-| [norman-huth/nova-values-field](https://github.com/Muetze42/nova-values-field)             | NormanHuth\SingleResource\Fields\NormanHuthValues                                                    |
+| Package                                                                                    | Single Resource                                         |
+|--------------------------------------------------------------------------------------------|---------------------------------------------------------|
+| [File Field](https://nova.laravel.com/docs/4.0/resources/file-fields.html#overview)        | NormanHuth\SingleResource\Fields\NormanHuth\File        |
+| [norman-huth/nova-iframe-popup](https://github.com/Muetze42/norman-huth/nova-iframe-popup) | NormanHuth\SingleResource\Fields\NormanHuth\IframePopup |
+| [norman-huth/nova-secret-field](https://github.com/Muetze42/norman-huth/nova-secret-field) | NormanHuth\SingleResource\Fields\NormanHuth\SecretField |
+| [norman-huth/nova-values-field](https://github.com/Muetze42/nova-values-field)             | NormanHuth\SingleResource\Fields\NormanHuthValues       |
 
 ### Field Development Notices
 
@@ -133,9 +148,7 @@ The following fields are already included:
 
 ## Todos
 
-* Add `encrypted`
 * Custom `ResourceUpdateController` & `Update` component to be able to use slugs in url
-* [Nova File Field](https://nova.laravel.com/docs/4.0/resources/fields.html#file-field)
 * [ebess/advanced-nova-media-library](https://github.com/ebess/advanced-nova-media-library)
 * ???
 

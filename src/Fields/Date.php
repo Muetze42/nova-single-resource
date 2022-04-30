@@ -10,9 +10,5 @@ class Date extends Field
 {
     use FieldTrait;
 
-    protected function fieldResolveAttribute($attribute, $resource, $value)
-    {
-        $date = !$attribute ? $value : \Illuminate\Support\Facades\Date::instance(Carbon::createFromFormat('Y-m-d', $attribute)->startOfDay());
-        return call_user_func($this->resolveCallback, $date, $resource, $attribute);
-    }
+    protected string $cast = 'date';
 }
