@@ -90,6 +90,12 @@ class Setting extends Model
     public static string $valueColumn = 'value';
 ```
 
+### Change cast of a field
+```php
+Text::make(__('SMTP Password'), 'smtp_password')
+    ->cast('encrypted'),
+```
+
 ### Single Resource Fields
 
 In this resource must be used adjusted fields.
@@ -133,7 +139,6 @@ The following fields are already included:
 
 ## Todos
 
-* Add `encrypted`
 * Custom `ResourceUpdateController` & `Update` component to be able to use slugs in url
 * [Nova File Field](https://nova.laravel.com/docs/4.0/resources/fields.html#file-field)
 * [ebess/advanced-nova-media-library](https://github.com/ebess/advanced-nova-media-library)
