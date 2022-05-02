@@ -68,7 +68,7 @@ trait FieldTrait
      * Cast values
      *
      * @param $value
-     * @return bool|BaseCollection|int|mixed|string|null|void
+     * @return bool|BaseCollection|int|mixed|string|null|void|array
      */
     protected function castValue($value)
     {
