@@ -1,19 +1,30 @@
 {
     "name": "norman-huth/nova-single-resource",
     "description": "Laravel Nova resource and fields for single record resources",
+    "homepage": "https://github.com/Muetze42/nova-single-resource",
+    "support": {
+        "issues": "https://github.com/Muetze42/nova-single-resource/issues",
+        "source": "https://github.com/Muetze42/nova-single-resource",
+        "docs": "https://github.com/Muetze42/nova-single-resource#readme"
+    },
+    "keywords": [
+        "nova",
+        "laravel",
+        "nova-4",
+        "larave-nova"
+    ],
+    "authors": [
+        {
+            "name": "Norman Huth",
+            "homepage": "https://huth.it"
+        }
+    ],
     "license": "MIT",
     "autoload": {
         "psr-4": {
             "NormanHuth\\SingleResource\\": "src/"
         }
     },
-    "authors": [
-        {
-            "name": "Norman Huth",
-            "email": "norman@huth.it",
-            "homepage": "https://huth.it"
-        }
-    ],
     "extra": {
         "laravel": {
             "providers": [
