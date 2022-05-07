@@ -159,5 +159,4 @@ The following fields are already included:
 * ???
 
 ---
-
-This is a prerelease. No support via mail for all public packages.
+[![More Laravel Nova Packages](https://raw.githubusercontent.com/Muetze42/asset-repo/main/svg/more-laravel-nova-packages.svg)](https://huth.it/nova-packages)
