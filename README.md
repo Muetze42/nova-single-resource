@@ -19,6 +19,8 @@ You can create a resource with `php artisan nova:single-resource Settings`.
 The table still requires a primary ID and this package is designed to allow the Value column to be nullable.
 
 ```php
+use NormanHuth\SingleResource\Traits\ResourceTrait;
+
 class Setting extends Resource
 {
     use ResourceTrait;  // required
