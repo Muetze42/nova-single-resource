@@ -28,6 +28,12 @@ class {{ class }} extends Resource
 {
     use ResourceTrait;
 
+    public function __construct($resource = null)
+    {
+        $this->bootResourceTrait();
+        parent::__construct($resource);
+    }
+
     protected static function sections(): array
     {
         return [

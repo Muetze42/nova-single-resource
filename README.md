@@ -15,13 +15,19 @@ Create resources for "single" resources (key-value database structure), such as 
 
 The following description refers to the Model Settings as an example....
 
-You can create a resource with `php artisan nova:single-resource Settings`.  
+You can create a resource with `php artisan nova:single-resource Setting`.  
 The table still requires a primary ID and this package is designed to allow the Value column to be nullable.
 
 ```php
 class Setting extends Resource
 {
     use ResourceTrait;  // required
+
+    public function __construct($resource = null)
+    {
+        $this->bootResourceTrait(); // Required
+        parent::__construct($resource);
+    }
 
     protected static function sections(): array
     {
