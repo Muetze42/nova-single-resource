@@ -1,5 +1,3 @@
-[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
-
 # Laravel Nova Single Resource
 
 Create resources for "single" resources (key-value database structure), such as a settings table.
@@ -19,6 +17,8 @@ You can create a resource with `php artisan nova:single-resource Setting`.
 The table still requires a primary ID and this package is designed to allow the Value column to be nullable.
 
 ```php
+use NormanHuth\SingleResource\Traits\ResourceTrait;
+
 class Setting extends Resource
 {
     use ResourceTrait;  // required
@@ -166,3 +166,7 @@ The following fields are already included:
 
 ---
 [![More Laravel Nova Packages](https://raw.githubusercontent.com/Muetze42/asset-repo/main/svg/more-laravel-nova-packages.svg)](https://huth.it/nova-packages)
+
+[![Stand With Ukraine](https://raw.githubusercontent.com/vshymanskyy/StandWithUkraine/main/banner2-direct.svg)](https://vshymanskyy.github.io/StandWithUkraine/)
+
+[![Woman. Life. Freedom.](https://raw.githubusercontent.com/Muetze42/Muetze42/2033b219c6cce0cb656c34da5246434c27919bcd/files/iran-banner-big.svg)](https://linktr.ee/CurrentPetitionsFreeIran)
