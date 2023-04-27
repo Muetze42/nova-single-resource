@@ -18,7 +18,7 @@ trait ResourceTrait
 
     //protected static array $slugs = [];
 
-    public function __construct($resource)
+    public function bootResourceTrait()
     {
         $sections = static::sections();
         $sections = array_reverse($sections, true);
@@ -70,8 +70,6 @@ trait ResourceTrait
             //static::$slugs[$ids[$i]] = $slug;
             unset($ids[$i++]);
         }
-
-        parent::__construct($resource);
     }
 
     /**
